@@ -1,11 +1,18 @@
 $(document).ready(function() {
   $(".clickable").click(function() {
-    $("#walrus-showing").toggle();
-    $("#walrus-hidden").toggle();
-  });
+    $("#walrus-showing").toggle("<p>Hello World</p>");
+    $("#walrus-hidden").toggle("<p>Hello World</p>");
+    $("ul#walrus").after("<li>Hello, you found me!</li>");
+    $("ul#walrus").children("li").first().click(function() {
+  $(this).remove();
+});
+    // $(this).next().toggle();
+    // $(".speak").click(function(){
+    // $(this).prev().toggle();
+});
   $("button#hello").click(function() {
       $("ul#user").append("<li>Hello!</li>");
-      $("ul#webpage").append("<li>Why hello there!</li>");
+      // $("ul#webpage").append("<li>Why hello there!</li>");
     });
 
     $("button#goodbye").click(function() {
